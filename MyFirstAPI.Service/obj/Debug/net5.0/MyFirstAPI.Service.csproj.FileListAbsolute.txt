@@ -1,0 +1,12 @@
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\bin\Debug\net5.0\MyFirstAPI.Service.deps.json
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\bin\Debug\net5.0\MyFirstAPI.Service.dll
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\bin\Debug\net5.0\ref\MyFirstAPI.Service.dll
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\bin\Debug\net5.0\MyFirstAPI.Service.pdb
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\obj\Debug\net5.0\MyFirstAPI.Service.csprojAssemblyReference.cache
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\obj\Debug\net5.0\MyFirstAPI.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\obj\Debug\net5.0\MyFirstAPI.Service.AssemblyInfoInputs.cache
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\obj\Debug\net5.0\MyFirstAPI.Service.AssemblyInfo.cs
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\obj\Debug\net5.0\MyFirstAPI.Service.csproj.CoreCompileInputs.cache
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\obj\Debug\net5.0\MyFirstAPI.Service.dll
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\obj\Debug\net5.0\ref\MyFirstAPI.Service.dll
+C:\Users\test\Desktop\App Development\MyFirstAPI\MyFirstAPI.Service\obj\Debug\net5.0\MyFirstAPI.Service.pdb

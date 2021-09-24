@@ -1,0 +1,12 @@
+<div>
+  <h3 style="text-align: center;">Actions</h3>
+</div>
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li *ngFor="let menuItem of menuItems">
+      <a href="{{menuItem.menuLink}}">
+        <h4>{{ menuItem.menuName }}</h4>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -11,5 +11,11 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  logingoogle() {
+    
+    console.log(123456)
+  
+}
 
 }

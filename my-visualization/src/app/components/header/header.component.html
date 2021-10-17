@@ -1,3 +1,6 @@
-<div class="col-6">
-    <button class="btn btn-light" style="background-color: #6c757d !important;">Help</button>
-</div>
+<mat-toolbar color="basic">
+	<div [routerLink]="'/'">My Visualization</div>
+	<span class="example-spacer"></span>
+	<button mat-raised-button class="mat-button-base" [routerLink]="'/launchpad'">Launchpad</button>
+	<button mat-raised-button class="mat-button-base" [routerLink]="'/aud'">Aud</button>
+</mat-toolbar>

@@ -1,80 +1,112 @@
-<app-header></app-header>
-
 <!-- Tab content -->
-<div id="AUD" class="tabcontent">
-    <div class="row sound-wave">
-        <div class="col-10">
-            <div class="card">
-                <div class="card-body">
-                    <wavesurfer id="wavesurfer2" [trackurl]="'https://www.kennethcaple.com/api/mp3/richinlovemutedguitarechoing.mp3'" [wavesurferOptions]="{backgroundColor: 'black',waveColor:'white',cursorColor:'grey'}"></wavesurfer>
-                </div>
-            </div>
+<div id="AUD" class="tabcontent pt-3">
+  <div class="row sound-wave">
+    <div class="col-10">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <span id="time-current">0:00</span>
+            <span id="time-remain">0:00</span>
+          </div>
+          <div id="waveform"></div>
+          
+          <div *ngIf="wave" class="controls">
+            <button mat-mini-fab (click)="!wave.isPlaying() ? playWaveform() : pauseWaveform()">
+              <mat-icon *ngIf="!wave.isPlaying()">play_arrow</mat-icon>
+              <mat-icon *ngIf="wave.isPlaying()">pause</mat-icon>
+            </button>
+            <button mat-mini-fab (click)="stopWaveform()">
+              <mat-icon>stop</mat-icon>
+            </button>
+          </div>
         </div>
-        <div class="col-2">
-            <button class="btn btn-light sound-wave-button">Original</button>
-        </div>
+      </div>
     </div>
-
-    <div class="row sound-wave">
-        <div class="col-10">
-            <div class="card">
-                <div class="card-body">
-                    Sound waves here!
-                </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <button class="btn btn-light sound-wave-button">New</button>
-        </div>
+    <div class="col-2">
+      <button class="btn btn-light sound-wave-button">Original</button>
     </div>
+  </div>
 
-    <div class="row" style="margin-top:2px;">
-        <div class="col-2">
-
+  <div class="row sound-wave">
+    <div class="col-10">
+      <div class="card">
+        <div class="card-body">
+          <button mat-mini-fab (click)="startMicro()">
+            <mat-icon>fiber_manual_record</mat-icon>
+          </button>
+          <button mat-mini-fab (click)="stopMicro()">
+            <mat-icon>stop</mat-icon>
+          </button>
+          <!-- <button (click)="startMicro()">start device</button> -->
+          <div id="waveform-micro"></div>
         </div>
-        <div class="col-6" style="text-align: right;">
-            <button class="btn btn-light AUD-select-file-button">FileName.mp3</button>
-        </div>
-        <div class="col-4">
-            <a class="icon-button"><i class="fas fa-play-circle fa-2x"></i></a>
-        </div>
+      </div>
     </div>
-
-    <div class="row" style="margin-top:2px;">
-        <div class="col-2">
-
-        </div>
-        <div class="col-6" style="text-align: right;">
-            <div class="row">
-                <div class="col-3">
-                    <button class="btn btn-light AUD-mode-button">DIST</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-light AUD-mode-button">RVRB</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-light AUD-mode-button">DELAY</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-light AUD-mode-button">PITCH</button>
-                </div>
-            </div>
-
-
-        </div>
-        <div class="col-4">
-            <a href="#" class="icon-button"><i class="fas fa-pause-circle fa-2x"></i></a>
-        </div>
+    <div class="col-2">
+      <button class="btn btn-light sound-wave-button">New</button>
     </div>
+  </div>
 
-    <div class="row" style="margin-top:2px;">
-        <div class="col-2"></div>
-        <div class="col-6" style="text-align: right;">
-            <button class="btn btn-light AUD-select-file-button">DATA BASE ACCESS</button>
-        </div>
-        <div class="col-4">
-            <a href="#" class="icon-button"><i class="fas fa-record-vinyl fa-2x"></i></a>
-        </div>
+  <div class="row" style="margin-top:2px;">
+    <div class="col-2">
+
     </div>
+    <div class="col-6" style="text-align: right;">
+      <button class="btn btn-light AUD-select-file-button">FileName.mp3</button>
+    </div>
+    <div class="col-4">
+      <a class="icon-button"><i class="fas fa-play-circle fa-2x"></i></a>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:2px;">
+    <div class="col-2">
+
+    </div>
+    <div class="col-6" style="text-align: right;">
+      <div class="row">
+        <div class="col-3">
+
+          <button mat-raised-button [matMenuTriggerFor]="dist">DIST</button>
+          <mat-menu #dist="matMenu">
+            <mat-slider vertical min="1" max="5" step="0.5" value="1.5"></mat-slider>
+          </mat-menu>
+        </div>
+        <div class="col-3">
+          <button mat-raised-button [matMenuTriggerFor]="rvrb">RVRB</button>
+          <mat-menu #rvrb="matMenu">
+            <mat-slider vertical min="1" max="5" step="0.5" value="1.5"></mat-slider>
+          </mat-menu>
+        </div>
+        <div class="col-3">
+          <button mat-raised-button [matMenuTriggerFor]="delay">DELAY</button>
+          <mat-menu #delay="matMenu">
+            <mat-slider vertical min="1" max="5" step="0.5" value="1.5"></mat-slider>
+          </mat-menu>
+        </div>
+        <div class="col-3">
+          <button mat-raised-button [matMenuTriggerFor]="pitch">PITCH</button>
+          <mat-menu #pitch="matMenu">
+            <mat-slider vertical min="1" max="5" step="0.5" value="1.5"></mat-slider>
+          </mat-menu>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-4">
+      <a href="#" class="icon-button"><i class="fas fa-pause-circle fa-2x"></i></a>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:2px;">
+    <div class="col-2"></div>
+    <div class="col-6" style="text-align: right;">
+      <button class="btn btn-light AUD-select-file-button">DATA BASE ACCESS</button>
+    </div>
+    <div class="col-4">
+      <a href="#" class="icon-button"><i class="fas fa-record-vinyl fa-2x"></i></a>
+    </div>
+  </div>
 
 </div>

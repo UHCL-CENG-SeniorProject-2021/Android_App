@@ -1,130 +1,42 @@
-<app-header></app-header>
-
-<!-- LP -->
-<div id="LP" class="tabcontent">
-    <div class="row LP">
-        <div class="col-sm-8">
-            <div class="row">
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary music-button"></button>
-                    <button type="button" class="btn btn-secondary music-button"></button>
-                    <button type="button" class="btn btn-success music-button"></button>
-                    <button type="button" class="btn btn-danger music-button"></button>
-                    <button type="button" class="btn btn-warning music-button"></button>
-                    <button type="button" class="btn btn-info music-button"></button>
-                    <button type="button" class="btn btn-light music-button"></button>
-                    <button type="button" class="btn btn-dark music-button"></button>
-                </div>
+<div class="row pt-3">
+  <div class="col-md-8 col-12 pe-5">
+    <div class="p-3 launchpad">
+      <mat-grid-list [cols]="columnNumber" rowHeight="1:1" gutterSize="10px">
+        <div *ngFor="let item of lstButtons; let i = index">
+          <mat-grid-tile [ngClass]="'column-' + (i % columnNumber)" (click)="clickLaunchpad(i)">
+            <div class="example-ripple-container mat-elevation-z4" matRipple>
+              <!-- {{ item }} -->
             </div>
-            <div class="row">
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary music-button"></button>
-                    <button type="button" class="btn btn-secondary music-button"></button>
-                    <button type="button" class="btn btn-success music-button"></button>
-                    <button type="button" class="btn btn-danger music-button"></button>
-                    <button type="button" class="btn btn-warning music-button"></button>
-                    <button type="button" class="btn btn-info music-button"></button>
-                    <button type="button" class="btn btn-light music-button"></button>
-                    <button type="button" class="btn btn-dark music-button"></button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary music-button"></button>
-                    <button type="button" class="btn btn-secondary music-button"></button>
-                    <button type="button" class="btn btn-success music-button"></button>
-                    <button type="button" class="btn btn-danger music-button"></button>
-                    <button type="button" class="btn btn-warning music-button"></button>
-                    <button type="button" class="btn btn-info music-button"></button>
-                    <button type="button" class="btn btn-light music-button"></button>
-                    <button type="button" class="btn btn-dark music-button"></button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary music-button"></button>
-                    <button type="button" class="btn btn-secondary music-button"></button>
-                    <button type="button" class="btn btn-success music-button"></button>
-                    <button type="button" class="btn btn-danger music-button"></button>
-                    <button type="button" class="btn btn-warning music-button"></button>
-                    <button type="button" class="btn btn-info music-button"></button>
-                    <button type="button" class="btn btn-light music-button"></button>
-                    <button type="button" class="btn btn-dark music-button"></button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary music-button"></button>
-                    <button type="button" class="btn btn-secondary music-button"></button>
-                    <button type="button" class="btn btn-success music-button"></button>
-                    <button type="button" class="btn btn-danger music-button"></button>
-                    <button type="button" class="btn btn-warning music-button"></button>
-                    <button type="button" class="btn btn-info music-button"></button>
-                    <button type="button" class="btn btn-light music-button"></button>
-                    <button type="button" class="btn btn-dark music-button"></button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary music-button"></button>
-                    <button type="button" class="btn btn-secondary music-button"></button>
-                    <button type="button" class="btn btn-success music-button"></button>
-                    <button type="button" class="btn btn-danger music-button"></button>
-                    <button type="button" class="btn btn-warning music-button"></button>
-                    <button type="button" class="btn btn-info music-button"></button>
-                    <button type="button" class="btn btn-light music-button"></button>
-                    <button type="button" class="btn btn-dark music-button"></button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary music-button"></button>
-                    <button type="button" class="btn btn-secondary music-button"></button>
-                    <button type="button" class="btn btn-success music-button"></button>
-                    <button type="button" class="btn btn-danger music-button"></button>
-                    <button type="button" class="btn btn-warning music-button"></button>
-                    <button type="button" class="btn btn-info music-button"></button>
-                    <button type="button" class="btn btn-light music-button"></button>
-                    <button type="button" class="btn btn-dark music-button"></button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-primary music-button"></button>
-                    <button type="button" class="btn btn-secondary music-button"></button>
-                    <button type="button" class="btn btn-success music-button"></button>
-                    <button type="button" class="btn btn-danger music-button"></button>
-                    <button type="button" class="btn btn-warning music-button"></button>
-                    <button type="button" class="btn btn-info music-button"></button>
-                    <button type="button" class="btn btn-light music-button"></button>
-                    <button type="button" class="btn btn-dark music-button"></button>
-                </div>
-            </div>
+          </mat-grid-tile>
         </div>
-        <div class="col-sm-4" style="text-align: center;">
-            <p class="function-title">Musik Makr5000</p>
-            <div class="row">
-                <div>
-                    <button class="btn btn-primary pick-function-button">PB</button>
-                </div>
-
-            </div>
-            <div class="row">
-                <div>
-                    <button class="btn btn-success pick-function-button">DB</button>
-                </div>
-            </div>
-            <div class="row">
-                <div>
-                    <button class="btn btn-warning pick-function-button">MS</button>
-                </div>
-            </div>
-            <div class="row">
-                <div>
-                    <button class="btn btn-danger pick-function-button">REG</button>
-                </div>
-            </div>
-        </div>
+      </mat-grid-list>
 
     </div>
+    <div class="d-flex align-items-center">
+      <button mat-mini-fab aria-label="Example icon button with a home icon">
+        <mat-icon>play_arrow</mat-icon>
+      </button>
+      <button mat-mini-fab aria-label="Example icon button with a home icon">
+        <mat-icon>pause</mat-icon>
+      </button>
+      <span>0:00</span>
+      <mat-slider aria-label="unit(s)"></mat-slider>
+      <span>05:00</span>
+    </div>
+  </div>
+  <div class="col-md-4 col-12">
+    musik makr 5000
+    <div class="p-2">
+      <button mat-raised-button class="mat-button-base" (click)="playback()">Play back</button>
+    </div>
+    <div class="p-2">
+      <button mat-raised-button class="mat-button-base" (click)="saveToDB()">Save to Database</button>
+    </div>
+    <div class="p-2">
+      <button mat-raised-button class="mat-button-base" (click)="makeSong()">Make Song</button>
+    </div>
+    <div class="p-2">
+      <button mat-raised-button class="mat-button-base" (click)="record()">Record</button>
+    </div>
+  </div>
 </div>

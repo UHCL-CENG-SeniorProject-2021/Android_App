@@ -6,10 +6,8 @@ import { HomePageComponent } from './page/home-page/home-page.component';
 import { LaunchpadComponent } from './page/launchpad/launchpad.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
   { path: 'launchpad', component: LaunchpadComponent },
-  { path: 'dsp', component: DigitalSignalProcessingComponent },
-  { path: 'aud', component: AudComponent },
+  { path: '', component: HomePageComponent },
 ];
 
 

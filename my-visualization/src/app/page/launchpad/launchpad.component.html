@@ -1,5 +1,5 @@
 <div class="row pt-3">
-  <div class="col-md-8 col-12 pe-5">
+  <div class="col-md-6 col-12 pe-5">
     <div class="p-3 launchpad">
       <mat-grid-list [cols]="columnNumber" rowHeight="1:1" gutterSize="10px">
         <div *ngFor="let item of lstButtons; let i = index">
@@ -24,8 +24,8 @@
       <span>05:00</span>
     </div>
   </div>
-  <div class="col-md-4 col-12">
-    musik makr 5000
+  <div class="col-md-6 col-12">
+    <!-- musik makr 5000
     <div class="p-2">
       <button mat-raised-button class="mat-button-base" (click)="playback()">Play back</button>
     </div>
@@ -37,6 +37,7 @@
     </div>
     <div class="p-2">
       <button mat-raised-button class="mat-button-base" (click)="record()">Record</button>
-    </div>
+    </div> -->
+    <app-aud></app-aud>
   </div>
 </div>

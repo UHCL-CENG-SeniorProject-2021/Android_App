@@ -17,7 +17,8 @@ export class LaunchpadComponent implements OnInit {
   clickLaunchpad(index: number) {
     const row = Math.floor(index / 8);
     const col = index % this.columnNumber;
-    console.log(`button row ${row}, col ${col} has been clicked`);
+    const audio = new Audio(`../assets/sounds/${row}${col}.mp3`);
+    audio.play();
   }
 
   playback() {
